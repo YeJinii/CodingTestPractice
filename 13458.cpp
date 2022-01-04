@@ -7,10 +7,10 @@ using namespace std;
 
 int main(void)
 {
-    int N, B, C, cnt;
+    long long int N, B, C, cnt;
     cin >> N;
 
-    vector<int> A(N);
+    vector<long long int> A(N);
     for (int i = 0; i < N; i++)
         cin >> A[i];
 
