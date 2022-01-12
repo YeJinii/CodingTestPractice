@@ -15,7 +15,7 @@ int main(void)
     while (n--)
     {
         //check 배열 초기화
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 26; i++)
             check[i] = false;
 
         string s;
