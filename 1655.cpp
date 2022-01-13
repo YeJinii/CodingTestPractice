@@ -31,42 +31,16 @@ int main(void)
             min_pq.push(n);
         }
 
-        if (!max_pq.empty())
+        if (!max_pq.empty() && !min_pq.empty() && (max_pq.top() > min_pq.top()))
+        {
+            //최대합의 top이 최소합의 top보다 크면 교체
+            int tmp = max_pq.top();
+            max_pq.pop();
+            max_pq.push(min_pq.top());
+            min_pq.pop();
+            min_pq.push(tmp);
+        }
+
+        cout << max_pq.top() << "\n";
     }
 }
-
-// 첫번째 시도
-// #include <vector>
-// #include <algorithm>
-
-// using namespace std;
-
-// vector<int> cal;
-
-// int main(void)
-// {
-//     cin.tie(NULL);
-//     ios::sync_with_stdio(false);
-
-//     int N;
-//     cin >> N;
-
-//     for (int i = 0; i < N; i++)
-//     {
-//         int n;
-//         cin >> n;
-
-//         cal.push_back(n);
-//         sort(cal.begin(), cal.end());
-
-//         if (cal.size() % 2 == 0)
-//         { //백준이가 외친 수의 개수가 짝수개라면
-//             cout << cal[cal.size() / 2 - 1] << endl;
-//         }
-//         else
-//         { //홀수개라면
-//             cout << cal[cal.size() / 2] << endl;
-//         }
-//     }
-//     return 0;
-// }
