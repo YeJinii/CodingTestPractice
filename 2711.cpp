@@ -1,4 +1,4 @@
-//오타맨 고창영_브론즈2
+//오타맨 고창영_브론즈 2
 #include <iostream>
 #include <string>
 
