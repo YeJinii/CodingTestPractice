@@ -56,10 +56,13 @@ int main(void)
             int ny = y + dy[d];
             if (nx > 0 && ny > 0 && nx <= N && ny <= M)
             {
-                if (!m[nx][ny] && visited[nx][ny][w] != 0)
+                if (!m[nx][ny] && !visited[nx][ny][w])
                 {
-                    visited[nx][ny][w] = true;
+                    visited[nx][ny][w] = visited[x][y][w] + 1;
                     q.push({nx, ny, w});
+                }
+                else if (!visited[nx][ny][w] && w == 0)
+                {
                 }
             }
         }
