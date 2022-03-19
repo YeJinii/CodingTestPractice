@@ -9,7 +9,7 @@ using namespace std;
 unordered_map <string,int> m[10+1];
 int max_cnt[10+1];
 
-void comb(string s, int cnt, string ns){
+void comb(string s, int cnt, string ns){//부분 조합을 생성하는 함수
     if(cnt==s.length()){
         int len=ns.length();
         if(len>1){
